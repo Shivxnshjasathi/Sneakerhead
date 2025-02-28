@@ -1,3 +1,4 @@
+import 'package:ecommerse/screens/deatiliteam.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -176,7 +177,15 @@ class _HomeState extends State<Home> {
                             padding: const EdgeInsets.all(10.0),
                             child: Row(
                               children: [
-                                Itemtile(),
+                                InkWell(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => Deatiliteam(),
+                                          ));
+                                    },
+                                    child: Itemtile()),
                                 Itemtile(),
                                 Itemtile(),
                                 Itemtile(),
